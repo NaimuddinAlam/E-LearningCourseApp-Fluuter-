@@ -20,9 +20,49 @@ class HomePage extends StatelessWidget {
           children: [EmojiText(),SearchBAR(),
             FeatureCourse(),ActiveCourse()],
         ),
-      )
+      ),
+      bottomNavigationBar: _buildBottomNavigationBar()
 
     );
+  }
+  BottomNavigationBar _buildBottomNavigationBar()
+  {
+return BottomNavigationBar(
+  type: BottomNavigationBarType.fixed,
+  backgroundColor: kBackground,
+  showSelectedLabels: false,
+  showUnselectedLabels: false,
+  items: [
+    BottomNavigationBarItem(
+        label: 'Home',
+        icon: Container(
+          padding: EdgeInsets.only(bottom: 5),
+          decoration: BoxDecoration(
+
+            border: Border(
+              bottom: BorderSide(
+                  color: kAccent,
+                  width: 2
+              ),
+
+            ),
+
+          ),
+          child: Text('Home',
+            style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: kFont
+            ),),
+        )),
+    BottomNavigationBarItem(label: 'Calender',
+        icon: Image.asset('assets/icons/calendar.png',width: 20,)),
+    BottomNavigationBarItem(label: 'Bookmark',
+        icon: Image.asset('assets/icons/bookmark.png',width: 20,)),
+    BottomNavigationBarItem(label: 'User',
+        icon: Image.asset('assets/icons/user.png',width: 20,))
+  ],
+);
   }
  AppBar _buildAppBar()
  {

@@ -47,12 +47,16 @@ class ActiveCourse extends StatelessWidget {
                     )
                   ],
                 ),
-                CircularPercentIndicator(radius: 30.0,
-                  lineWidth: 5.0,
-                  progressColor: kAccent,
+                Padding(
+                  padding: const EdgeInsets.only(left: 20,
+                  bottom: 5),
+                  child: CircularPercentIndicator(radius: 30.0,
+                    lineWidth: 5.0,
+                    progressColor: kAccent,
 
-                  percent: 0.61,
-                  center: Text('61%'),
+                    percent: 0.61,
+                    center: Text('61%'),
+                  ),
                 )
               ],
             ),
